@@ -1,0 +1,11 @@
+<button  
+    class="btn" 
+    [ngStyle]="{'background-color':color}" 
+    (click) = "onClick()"
+>
+    {{text}}
+</button>
+<!--expresioón con la variable text del button.component.ts-->
+<!--directiva ngStyle con la propiedad background. atributo color tomado como parametro que viene del button.component.ts-->
+<!--dattabinding a la función 'onClick()' en button.component.ts-->
+<!-- button template onClick()---button logic bntClick.emit()---header template toggleAddTask()---header logic -->
