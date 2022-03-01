@@ -1,8 +1,8 @@
 import {Task} from "./Task"; //importamos la interface Task
-export const TASK: Task[] = [
+export const TAREAS: Task[] = [
     {
         id: 1,
-        text: "terminar angular",
+        text: "Terminar Angular",
         day: 'Marzo 1 22:00',
         reminder:true
     },
@@ -14,7 +14,7 @@ export const TASK: Task[] = [
     },
     {
         id: 3,
-        text: "seguir con BBDD",
+        text: "Seguir con BBDD",
         day: 'Marzo 1 22:00',
         reminder:false
     }

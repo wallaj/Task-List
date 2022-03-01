@@ -1,0 +1,7 @@
+<app-tasks-item 
+    *ngFor="let task of tasks"
+    [task] ="task"
+>
+    {{task.text}}
+</app-tasks-item>
+<!--Traemos cada tarea de la lista de tareas 'tasks' montando cada una un componente task-item, tantos como sean necesarios-->
