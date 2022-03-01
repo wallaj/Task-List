@@ -1,7 +1,7 @@
 .task{
     background-color: #f4f4f4;
     margin: 5px;
-    padding: 10px20px;
+    padding: 10px 20px;
     cursor:pointer;
 }
 
@@ -12,4 +12,5 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
