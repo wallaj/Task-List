@@ -17,4 +17,8 @@ export class TaskService {
   getTask(): Observable<Task[]>{ //método 'getTask' definido como observable para que funcione asincronamente
     return this.http.get<Task[]>(this.apiURL); //petición GET al servidor con los datos de la bbdd, guardados en Task[]
   }
+  deleteTask(task:Task):Observable<Task>{
+    const url = `${this.apiURL}/${task.id}`; // http://localhost:5000/tasks/id
+    return this.http.delete<Task>(url);  //borra una tarea dentro del json bbdd que tenga el parametro recibido como id
+  }
 }

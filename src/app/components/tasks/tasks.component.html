@@ -1,7 +1,9 @@
 <app-tasks-item 
     *ngFor="let task of tasks"
     [task] ="task"
+    (onDeleteTask)="deleteTask(task)">
+    <!--cuando se reciba el evento 'onDeleteTask', se llama a la función 'deleteTask'-->
 >
-    {{task.text}}
+
 </app-tasks-item>
 <!--Traemos cada tarea de la lista de tareas 'tasks' montando cada una un componente task-item, tantos como sean necesarios-->
