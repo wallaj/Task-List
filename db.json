@@ -1,10 +1,28 @@
 {
   "tasks": [
     {
-      "id": 1,
+      "id": 3,
       "text": "Investigar Bootstrap",
       "day": "Marzo 2 todo el día",
       "reminder": true
+    },
+    {
+      "id": 5,
+      "text": "Investigar Bootstrap",
+      "day": "Marzo 2 todo el día",
+      "reminder": false
+    },
+    {
+      "id": 4,
+      "text": "Investigar Bootstrap",
+      "day": "Marzo 2 todo el día",
+      "reminder": false
+    },
+    {
+      "id": 2,
+      "text": "Investigar Bootstrap",
+      "day": "Marzo 2 todo el día",
+      "reminder": false
     }
   ]
 }

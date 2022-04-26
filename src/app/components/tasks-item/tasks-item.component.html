@@ -1,4 +1,8 @@
-<div class="task">
+<div class="task"
+    [ngClass]="{reminder: task.reminder}"
+    (click)="onToggle(task)"
+    
+>  
     <h3>{{task.text}}
         <fa-icon 
             [icon]="faTimes"
@@ -7,3 +11,5 @@
         ></fa-icon></h3>
     <p>{{task.day}}</p>
 </div>
+<!---La clase se aplica en base a si el reminder es verdadero. En la interface Task, reminder es un booleano-->
+<!----La directiva dbClick() le dice a angular que tiene que hacer cuando se hace doble click sobre un elemento html-->

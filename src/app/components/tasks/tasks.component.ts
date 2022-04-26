@@ -30,12 +30,16 @@ export class TasksComponent implements OnInit {
 
   deleteTask(task:Task){
     this.servicioTareas.deleteTask(task).subscribe(()=>{
-      this.servicioTareas.getTask().subscribe((_tasks)=>{
-        this.tasks = _tasks})
+      this.tasks = this.tasks.filter(t => t.id !== task.id)
        //deleteTask recibe una tarea, llama al servcio que borra la tarea, este se enlasa con subcribe() al observable para su 
-       //asincrona. Ejecutado el servicio para borrar la tarea, el subscribe  ejecuta el callback con el servicio getTask y su subscribe
-       //el cual tb tiene un callback que asigna a tasks las tareas obtenidas con la peticion get del servcio getTask 
+       //asincrona. Ejecutado el servicio para borrar la tarea, el subscribe  ejcuta un callback donde se llama devuelta al listado de tareas
+       //pero filtrandola por el id de la tarea borrada 
      
     });
+  }
+  toggleReminder(task:Task){
+    task.reminder = !task.reminder; //cambia el estado del reminder
+    
+    this.servicioTareas.updateTaskReminder(task).subscribe();//llama al servicio para actualizarlo en la bbdd
   }
 }
